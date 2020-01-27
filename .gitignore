@@ -2,6 +2,7 @@ debug
 debug.test
 main
 *.qtr
+*.qlog
 
 fuzzing/*/*.zip
 fuzzing/*/coverprofile
