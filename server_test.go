@@ -11,6 +11,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/lucas-clemente/quic-go/qlog"
+
 	"github.com/golang/mock/gomock"
 	"github.com/lucas-clemente/quic-go/internal/handshake"
 	"github.com/lucas-clemente/quic-go/internal/protocol"
@@ -332,6 +334,7 @@ var _ = Describe("Server", func() {
 					_ *tls.Config,
 					_ *handshake.TokenGenerator,
 					enable0RTT bool,
+					_ qlog.Tracer,
 					_ utils.Logger,
 					_ protocol.VersionNumber,
 				) quicSession {
@@ -384,6 +387,7 @@ var _ = Describe("Server", func() {
 					_ *tls.Config,
 					_ *handshake.TokenGenerator,
 					_ bool,
+					_ qlog.Tracer,
 					_ utils.Logger,
 					_ protocol.VersionNumber,
 				) quicSession {
@@ -413,6 +417,7 @@ var _ = Describe("Server", func() {
 					_ *tls.Config,
 					_ *handshake.TokenGenerator,
 					_ bool,
+					_ qlog.Tracer,
 					_ utils.Logger,
 					_ protocol.VersionNumber,
 				) quicSession {
@@ -474,6 +479,7 @@ var _ = Describe("Server", func() {
 					_ *tls.Config,
 					_ *handshake.TokenGenerator,
 					_ bool,
+					_ qlog.Tracer,
 					_ utils.Logger,
 					_ protocol.VersionNumber,
 				) quicSession {
@@ -578,6 +584,7 @@ var _ = Describe("Server", func() {
 					_ *tls.Config,
 					_ *handshake.TokenGenerator,
 					_ bool,
+					_ qlog.Tracer,
 					_ utils.Logger,
 					_ protocol.VersionNumber,
 				) quicSession {
@@ -631,6 +638,7 @@ var _ = Describe("Server", func() {
 				_ *tls.Config,
 				_ *handshake.TokenGenerator,
 				enable0RTT bool,
+				_ qlog.Tracer,
 				_ utils.Logger,
 				_ protocol.VersionNumber,
 			) quicSession {
@@ -662,6 +670,7 @@ var _ = Describe("Server", func() {
 				_ *tls.Config,
 				_ *handshake.TokenGenerator,
 				_ bool,
+				_ qlog.Tracer,
 				_ utils.Logger,
 				_ protocol.VersionNumber,
 			) quicSession {
@@ -719,6 +728,7 @@ var _ = Describe("Server", func() {
 				_ *tls.Config,
 				_ *handshake.TokenGenerator,
 				_ bool,
+				_ qlog.Tracer,
 				_ utils.Logger,
 				_ protocol.VersionNumber,
 			) quicSession {
